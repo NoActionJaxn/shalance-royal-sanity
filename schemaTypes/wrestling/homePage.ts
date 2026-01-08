@@ -29,6 +29,12 @@ export default defineType({
       type: "string",
     }),
     defineField({
+      name: "heroContent",
+      title: "Hero Content",
+      type: "array",
+      of: [{ type: "block" }],
+    }),
+    defineField({
       name: "heroBackgroundImage",
       title: "Hero Background Image",
       type: "image",

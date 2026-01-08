@@ -15,7 +15,7 @@ export const wrestlingStructure: StructureResolver = (S: StructureBuilder) =>
       S.listItem()
         .id(pageIds.WRESTLING_SITE_SETTINGS_PAGE)
         .schemaType(pageIds.WRESTLING_SITE_SETTINGS_PAGE)
-        .title('Wrestling Site Settings')
+        .title('Site Settings')
         .child(
           S.editor()
             .id(pageIds.WRESTLING_SITE_SETTINGS_PAGE)
@@ -25,7 +25,7 @@ export const wrestlingStructure: StructureResolver = (S: StructureBuilder) =>
       S.listItem()
         .id(pageIds.WRESTLING_HOME_PAGE)
         .schemaType(pageIds.WRESTLING_HOME_PAGE)
-        .title('Wrestling Home Page')
+        .title('Home')
         .child(
           S.editor()
             .id(pageIds.WRESTLING_HOME_PAGE)
@@ -35,7 +35,7 @@ export const wrestlingStructure: StructureResolver = (S: StructureBuilder) =>
       S.listItem()
         .id(pageIds.WRESTLING_ABOUT_PAGE)
         .schemaType(pageIds.WRESTLING_ABOUT_PAGE)
-        .title('Wrestling About Page')
+        .title('About')
         .child(
           S.editor()
             .id(pageIds.WRESTLING_ABOUT_PAGE)
@@ -45,7 +45,7 @@ export const wrestlingStructure: StructureResolver = (S: StructureBuilder) =>
       S.listItem()
         .id(pageIds.WRESTLING_GALLERY_PAGE)
         .schemaType(pageIds.WRESTLING_GALLERY_PAGE)
-        .title('Wrestling Gallery Page')
+        .title('Gallery')
         .child(
           S.editor()
             .id(pageIds.WRESTLING_GALLERY_PAGE)
@@ -55,7 +55,7 @@ export const wrestlingStructure: StructureResolver = (S: StructureBuilder) =>
       S.listItem()
         .id(pageIds.WRESTLING_MATCHES_PAGE)
         .schemaType(pageIds.WRESTLING_MATCHES_PAGE)
-        .title('Wrestling Matches Page')
+        .title('Matches')
         .child(
           S.editor()
             .id(pageIds.WRESTLING_MATCHES_PAGE)
@@ -65,7 +65,7 @@ export const wrestlingStructure: StructureResolver = (S: StructureBuilder) =>
       S.listItem()
         .id(pageIds.WRESTLING_EVENTS_PAGE)
         .schemaType(pageIds.WRESTLING_EVENTS_PAGE)
-        .title('Wrestling Events Page')
+        .title('Upcoming Events')
         .child(
           S.editor()
             .id(pageIds.WRESTLING_EVENTS_PAGE)

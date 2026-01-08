@@ -29,18 +29,33 @@ export default defineType({
       type: "string",
     }),
     defineField({
-      name: "content",
-      title: "Content",
-      type: "array",
-      of: [{ type: "block" }],
-    }),
-    defineField({
       name: "featuredImage",
       title: "Featured Image",
       type: "image",
       options: {
         hotspot: true,
       },
+    }),
+    defineField({
+      name: "content",
+      title: "Content",
+      type: "array",
+      of: [{ type: "block" }],
+    }),
+    defineField({
+      name: "gallery",
+      title: "Gallery",
+      type: "array",
+      of: [
+        defineField({
+          name: "galleryImage",
+          title: "Gallery Image",
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+        }),
+      ],
     }),
   ]
 });
