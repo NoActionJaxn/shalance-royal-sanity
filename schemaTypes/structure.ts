@@ -25,7 +25,7 @@ export const wrestlingStructure: StructureResolver = (S: StructureBuilder) =>
       S.listItem()
         .id(pageIds.WRESTLING_HOME_PAGE)
         .schemaType(pageIds.WRESTLING_HOME_PAGE)
-        .title('Home')
+        .title('Home Page')
         .child(
           S.editor()
             .id(pageIds.WRESTLING_HOME_PAGE)
@@ -35,7 +35,7 @@ export const wrestlingStructure: StructureResolver = (S: StructureBuilder) =>
       S.listItem()
         .id(pageIds.WRESTLING_ABOUT_PAGE)
         .schemaType(pageIds.WRESTLING_ABOUT_PAGE)
-        .title('About')
+        .title('About Page')
         .child(
           S.editor()
             .id(pageIds.WRESTLING_ABOUT_PAGE)
@@ -45,7 +45,7 @@ export const wrestlingStructure: StructureResolver = (S: StructureBuilder) =>
       S.listItem()
         .id(pageIds.WRESTLING_GALLERY_PAGE)
         .schemaType(pageIds.WRESTLING_GALLERY_PAGE)
-        .title('Gallery')
+        .title('Gallery Page')
         .child(
           S.editor()
             .id(pageIds.WRESTLING_GALLERY_PAGE)
@@ -55,7 +55,7 @@ export const wrestlingStructure: StructureResolver = (S: StructureBuilder) =>
       S.listItem()
         .id(pageIds.WRESTLING_MATCHES_PAGE)
         .schemaType(pageIds.WRESTLING_MATCHES_PAGE)
-        .title('Matches')
+        .title('Matches Page')
         .child(
           S.editor()
             .id(pageIds.WRESTLING_MATCHES_PAGE)
@@ -65,7 +65,7 @@ export const wrestlingStructure: StructureResolver = (S: StructureBuilder) =>
       S.listItem()
         .id(pageIds.WRESTLING_EVENTS_PAGE)
         .schemaType(pageIds.WRESTLING_EVENTS_PAGE)
-        .title('Upcoming Events')
+        .title('Events Page')
         .child(
           S.editor()
             .id(pageIds.WRESTLING_EVENTS_PAGE)

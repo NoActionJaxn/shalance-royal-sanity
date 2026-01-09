@@ -24,25 +24,29 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "matches",
-      title: "Matches",
+      name: "content",
+      title: "Content",
       type: "array",
-      of: [
-        defineField({
-          name: "match",
-          title: "Match",
-          type: "wrestlingMatch",
-        }),
-      ],
+      of: [{ type: "block" }],
     }),
   ]
 });
 
 export const wrestlingMatchType = defineType({
   name: "wrestlingMatch",
-  title: "Wrestling Match",
-  type: "object",
+  title: "Wrestling Matches",
+  type: "document",
   fields: [
+    defineField({
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "matchTitle",
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required(),
+    }),
     defineField({
       name: "matchTitle",
       title: "Match Title",

@@ -24,6 +24,12 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "content",
+      title: "Content",
+      type: "array",
+      of: [{ type: "block" }],  
+    }),
+    defineField({
       name: "upcomingEvents",
       title: "Upcoming Events",
       type: "array",
@@ -64,6 +70,11 @@ export const wrestlingEventType = defineType({
       name: "eventLocation",
       title: "Event Location",
       type: "string",
+    }),
+    defineField({
+      name: "eventUrl",
+      title: "Event URL",
+      type: "url",
     }),
     defineField({
       name: "eventDescription",
