@@ -7,4 +7,5 @@ export const pageIds = {
   WRESTLING_SITE_SETTINGS_PAGE: "wrestlingSiteSettingsPage",
   STREAMING_SCHEDULE_PAGE: "streamingSchedulePage",
   STREAMING_SITE_SETTINGS_PAGE: "streamingSiteSettingsPage",
+  ROOT_SITE_SETTINGS_PAGE: "rootSiteSettingsPage",
 }

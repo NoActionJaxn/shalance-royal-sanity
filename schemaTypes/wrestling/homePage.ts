@@ -42,5 +42,46 @@ export default defineType({
         hotspot: true,
       },
     }),
+    defineField({
+      name: "accolades",
+      title: "Accolades",
+      type: "array",
+      of: [{ type: "wrestlingAccolade" }],
+    }),
   ]
 });
+
+export const wrestlingAccoladeType = defineType({
+  name: "wrestlingAccolade",
+  title: "Wrestling Accolade",
+  type: "object",
+  fields: [
+    defineField({
+      name: "title",
+      title: "Title",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "year",
+      title: "Year",
+      type: "number",
+      validation: (Rule) => Rule.required().min(1900).max(new Date().getFullYear()),
+    }),
+    defineField({
+      name: "description",
+      title: "Description",
+      type: "text",
+    }),
+    defineField({
+      name: "author",
+      title: "Author",
+      type: "string",
+    }),
+    defineField({
+      name: "link",
+      title: "Link",
+      type: "url",
+    }),
+  ],
+})

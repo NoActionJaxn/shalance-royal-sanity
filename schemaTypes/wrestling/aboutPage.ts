@@ -42,20 +42,5 @@ export default defineType({
       type: "array",
       of: [{ type: "block" }],
     }),
-    defineField({
-      name: "gallery",
-      title: "Gallery",
-      type: "array",
-      of: [
-        defineField({
-          name: "galleryImage",
-          title: "Gallery Image",
-          type: "image",
-          options: {
-            hotspot: true,
-          },
-        }),
-      ],
-    }),
   ]
 });

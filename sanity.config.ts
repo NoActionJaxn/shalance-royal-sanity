@@ -4,7 +4,8 @@ import { visionTool } from '@sanity/vision'
 import type { NewDocumentOptionsResolver, TemplateItem, DocumentActionComponent } from 'sanity';
 import { schemaTypes } from './schemaTypes'
 import { SINGLETON_TYPES } from './constants/singletonTypes';
-import { wrestlingStructure, streamingStructure } from './schemaTypes/structure'
+import { wrestlingStructure, streamingStructure, rootStructure } from './schemaTypes/structure'
+import { colorInput } from '@sanity/color-input';
 
 
 const newDocumentOptions: NewDocumentOptionsResolver = (prev: TemplateItem[], { creationContext }) => {
@@ -32,13 +33,18 @@ const actions = (prev: DocumentActionComponent[], { schemaType }: { schemaType: 
   return prev;
 }
 
+const sharedPlugins = [
+  visionTool(),
+  colorInput()
+];
+
 export default defineConfig([
   {
     name: 'Streaming',
-    title: 'shalance-royal-streaming',
+    title: 'shalonce-royal-streaming',
     projectId: 'eimk2ovz',
     dataset: 'production',
-    plugins: [structureTool({ structure: streamingStructure }), visionTool()],
+    plugins: [structureTool({ structure: streamingStructure }), ...sharedPlugins],
     schema: {
       types: schemaTypes.streaming,
     },
@@ -50,10 +56,10 @@ export default defineConfig([
   },
   {
     name: 'Wrestling',
-    title: 'shalance-royal-wrestling',
+    title: 'shalonce-royal-wrestling',
     projectId: 'eimk2ovz',
     dataset: 'production',
-    plugins: [structureTool({ structure: wrestlingStructure }), visionTool()],
+    plugins: [structureTool({ structure: wrestlingStructure }), ...sharedPlugins],
     schema: {
       types: schemaTypes.wrestling,
     },
@@ -62,5 +68,20 @@ export default defineConfig([
       actions,
     },
     basePath: '/wrestling',
+  },
+  {
+    name: 'Root',
+    title: 'shalonce-royal-sides',
+    projectId: 'eimk2ovz',
+    dataset: 'production',
+    plugins: [structureTool({ structure: rootStructure }), ...sharedPlugins],
+    schema: {
+      types: schemaTypes.root,
+    },
+    document: {
+      newDocumentOptions,
+      actions,
+    },
+    basePath: '/root',
   }
 ]);

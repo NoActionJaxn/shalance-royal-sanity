@@ -101,3 +101,21 @@ export const streamingStructure: StructureResolver = (S: StructureBuilder) =>
         ),
       ...excludeSingletons(S),
     ]);
+
+export const rootStructure: StructureResolver = (S: StructureBuilder) =>
+  S.list()
+    .title('Root')
+    .items([
+      S.listItem()
+        .id(pageIds.ROOT_SITE_SETTINGS_PAGE)
+        .schemaType(pageIds.ROOT_SITE_SETTINGS_PAGE)
+        .title('Root Site Settings')
+        .child(
+          S.editor()
+            .id(pageIds.ROOT_SITE_SETTINGS_PAGE)
+            .schemaType(pageIds.ROOT_SITE_SETTINGS_PAGE)
+            .documentId(pageIds.ROOT_SITE_SETTINGS_PAGE),
+        ),
+      ...excludeSingletons(S),
+    ]);
+    
