@@ -10,6 +10,8 @@ import wrestlingAboutPage from "./wrestling/aboutPage";
 import wrestlingGalleryPage from "./wrestling/galleryPage";
 import wrestlingMatchesPage, { wrestlingMatchType } from "./wrestling/matchesPage";
 import wrestlingEventsPage, { wrestlingEventType } from "./wrestling/eventsPage";
+import wrestlingEmailList from "./wrestling/emailList";
+import wrestlingNewsletter from "./wrestling/newsletter";
 import streamingSchedulePage from "./streaming/schedulePage";
 import streamingSiteSettingsPage from "./streaming/siteSettings";
 import { ctaType } from "./shared/cta";
@@ -43,6 +45,8 @@ export const schemaTypes = {
     wrestlingGalleryPage,
     wrestlingMatchesPage,
     wrestlingEventsPage,
+    wrestlingEmailList,
+    wrestlingNewsletter,
     wrestlingSiteSettingsPage
   ],
   streaming: [
